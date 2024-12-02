@@ -1,0 +1,546 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #FFFFFF; /* Fondo limpio y moderno */
+    color: #333333; /* Texto principal */
+    scroll-behavior: smooth;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+  
+/* Header Section */
+/* General Header */
+.header {
+    background-color: #FFFFFF;
+    padding: 10px 20px; /* Reduce el espacio interno */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra más ligera */
+    height: 60px; /* Altura fija más compacta */
+}
+
+/* Logo y Nombre de la Marca */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 100px; /* Tamaño reducido del logo */
+    height: 39px;
+}
+
+.brand-name {
+    font-size: 1.5rem; /* Fuente más compacta */
+    color: #E07422;
+    margin-left: 8px;
+    font-weight: bold;
+}
+
+/* Navegación */
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    color: #333;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 0.9rem; /* Fuente más pequeña */
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #11999E;
+}
+
+/* Dropdown Button (Servicios) */
+.dropbtn {
+    background-color: #11999E;
+    color: #FFFFFF;
+    padding: 8px 12px; /* Botón más compacto */
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 6px; /* Bordes más sutiles */
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.dropbtn:hover {
+    background-color: #E07422;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FFFFFF;
+    min-width: 180px;
+    z-index: 1;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 8px 12px; /* Botones compactos */
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem;
+}
+
+.dropdown-content a:hover {
+    background-color: #F0F0F0;
+    color: #11999E;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Menú Hamburguesa */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 25px;
+    height: 20px; /* Tamaño más compacto */
+    cursor: pointer;
+}
+
+.bar {
+    background-color: #333;
+    height: 2px; /* Barras más finas */
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Responsive: Pantallas Pequeñas */
+@media screen and (max-width: 768px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: #FFFFFF;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a, .dropdown-content a {
+        margin: 8px 0;
+        width: 90%;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .dropdown-content {
+        position: static;
+        background-color: #FFFFFF;
+    }
+}
+
+/* Ajuste de desplazamiento para secciones */
+section {
+    scroll-margin-top: 70px; /* Desplazamiento para centrado */
+}
+
+
+
+
+
+/* Hero Section */
+  .hero {
+    background: url(/Images/background_hero.jpg) no-repeat center center / cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    position: relative;
+  }
+  
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
+    z-index: 1;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 700px;
+  }
+  
+  .hero h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #E0E0E0;
+  }
+  
+  .cta-buttons a {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .btn-primary {
+    background-color: #E07422;
+    color: #FFFFFF;
+    border: none;
+  }
+  
+  .btn-secondary {
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 2px solid #E07422;
+  }
+  
+  .btn-primary:hover {
+    background-color: #11999E;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4), inset 0 -2px 8px rgba(255, 255, 255, 0.3);
+    transform: scale(1.01);
+  }
+  
+  .btn-secondary:hover {
+    background-color: #11999E;
+    color: #FFFFFF;
+    border: 2px solid #11999E;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4), inset 0 -2px 8px rgba(255, 255, 255, 0.3);
+    transform: scale(1.01);
+}
+  
+
+
+
+/* About Section */
+.about-section {
+    padding: 60px 20px;
+    background-color: #F0F0F0; /* Fondo neutro para resaltar el contenido */
+    text-align: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  .about-content{
+    max-width: 900px;
+  }
+  
+  .about-content h2.headline {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 20px;
+  }
+  
+  .about-content h3.quote-author {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #11999E;
+    margin-bottom: 40px;
+  }
+
+  .brand-strong{
+    color: #E07422;
+  }
+  
+  .about-content p.story {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333333;
+    margin-bottom: 40px;
+  }
+  
+  .cta-btn-about {
+    position: relative;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #FFFFFF; /* Texto gris oscuro */
+    background: transparent;
+    border: none; /* Sin borde directo */
+    border-radius: 50px;
+    cursor: pointer;
+    z-index: 1;
+    overflow: hidden; /* Para que el degradado no salga del radio */
+    transition: all 0.3s ease-in-out;
+    
+  }
+  
+  .cta-btn-about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #11999E, #E07422); /* Degradado del borde */
+    z-index: -1;
+    transition: all 1s ease-in-out;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4), inset 0 -2px 8px rgba(255, 255, 255, 0.3);
+  }
+  
+  .cta-btn-about:hover::before {
+    background: linear-gradient(145deg, #E07422, #11999E); /* Invertir degradado */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4), inset 0 -2px 8px rgba(255, 255, 255, 0.3);
+  }
+  
+  .cta-btn-about:active {
+    transform: scale(0.98); /* Efecto de presión */
+}
+  
+
+
+
+  
+/* Sección de Servicios */
+/* Sección de Servicios */
+/* Sección de Servicios */
+.services-section {
+    background-color: #FFFFFF;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    max-width: 1200px; /* Limita el ancho a 1200px */
+    margin: 0 auto; /* Centra la sección */
+}
+
+/* Encabezado General */
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    color: #E07422;
+    margin-bottom: 10px;
+}
+
+.section-header p {
+    font-size: 1.2rem;
+    color: #333333;
+}
+
+/* Encabezado de Categorías */
+.category-header {
+    text-align: left;
+    margin-bottom: 9px;
+    margin-top: 20px;
+}
+
+.category-header h2 {
+    font-size: 1.8rem;
+    color: #11999E;
+    font-weight: bold;
+}
+
+.card-service h3 {
+    font-size: 1.5rem;
+    color: #E07422;
+    font-weight: bold;
+}
+
+.category-header p {
+    font-size: 1rem;
+    color: #666666;
+}
+
+/* Contenedor de Tarjetas con Scroll */
+.contenedor-tarjetas-servicios {
+    display: flex;
+    overflow-x: auto; /* Scroll horizontal */
+    gap: 20px;
+    padding: 20px 0;
+    scroll-snap-type: x mandatory; /* Alinea las tarjetas al scroll */
+}
+
+/* Scroll Personalizado */
+.contenedor-tarjetas-servicios::-webkit-scrollbar {
+    height: 8px;
+}
+
+.contenedor-tarjetas-servicios::-webkit-scrollbar-thumb {
+    background-color: #E07422;
+    border-radius: 4px;
+}
+
+.contenedor-tarjetas-servicios::-webkit-scrollbar-track {
+    background: #F0F0F0;
+}
+
+/* Tarjeta General (Wide Card) */
+.wide-card {
+    flex: 0 0 420px;
+    background-color: #F8F8F8;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    scroll-snap-align: start; /* Alinea la tarjeta en el scroll */
+}
+
+/* Tarjetas Individuales */
+.card-service {
+    flex: 0 0 300px; /* Ancho fijo para scroll horizontal */
+    background-color: #F0F0F0;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    scroll-snap-align: start;
+}
+
+/* Imágenes en las tarjetas */
+.card-image {
+    width: 90%; /* Ocupa el 90% del ancho de la tarjeta */
+    max-width: 300px; /* Ancho máximo de 300px */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-height: 120px; /* Alto máximo de 120px */
+    border-radius: 15px; /* Bordes redondeados */
+    margin: 0 auto 15px; /* Centra la imagen y da espacio debajo */
+    display: block; /* Asegura que la imagen esté centrada */
+    object-fit: contain; /* Ajusta la imagen proporcionalmente sin recortarla */
+}
+
+/* Botones */
+.card-service button, .wide-card button {
+    background-color: #11999E;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.card-service button:hover, .wide-card button:hover {
+    background-color: #E07422;
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+  
+  /* Contact Section */
+  .contact {
+    padding: 100px 20px;
+    background-color: #FFFFFF;
+    text-align: center;
+  }
+  
+  .contact h2 {
+    font-size: 2.5rem;
+    color: #11999E;
+    margin-bottom: 40px;
+  }
+  
+  form input,
+  form textarea {
+    width: 100%;
+    max-width: 600px;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  form button {
+    background-color: #E07422;
+    color: #FFFFFF;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #d06a1f;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #333333;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .footer p {
+    margin-bottom: 10px;
+  }
+  
+  .footer a {
+    color: #11999E;
+    margin: 0 10px;
+  }
+  
+  .footer a:hover {
+    color: #E07422;
+  }
