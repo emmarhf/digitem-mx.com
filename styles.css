@@ -39,7 +39,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 10;
+    z-index: 20;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra más ligera */
     height: 60px; /* Altura fija más compacta */
 }
@@ -87,7 +87,7 @@
     padding: 8px 12px; /* Botón más compacto */
     font-size: 0.9rem;
     border: none;
-    border-radius: 6px; /* Bordes más sutiles */
+    border-radius: 50px; /* Bordes más sutiles */
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
 }
@@ -348,20 +348,21 @@ section {
 
   
 /* Sección de Servicios */
-/* Sección de Servicios */
-/* Sección de Servicios */
 .services-section {
     background-color: #FFFFFF;
-    padding: 40px 20px;
     font-family: Arial, sans-serif;
-    max-width: 1200px; /* Limita el ancho a 1200px */
     margin: 0 auto; /* Centra la sección */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 /* Encabezado General */
 .section-header {
     text-align: center;
+    margin-top: 0px;
     margin-bottom: 40px;
+    width: 100%;
 }
 
 .section-header h2 {
@@ -374,6 +375,62 @@ section {
     font-size: 1.2rem;
     color: #333333;
 }
+
+/* Encabezado General Sticky */
+.sticky-header {
+    position: sticky;
+    top: 60px; /* Debajo del header principal de la página */
+    z-index: 10;
+    background-color: #FFFFFF;
+    width: 100%; /* Ocupa todo el ancho */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.sticky-header.hidden {
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+/* Hacer que el contenido comience después del header */
+.services-section {
+    margin-top: 60px; /* Espacio para evitar superposición */
+}
+
+.services-content {
+    padding: 20px;
+    max-width: 1200px; /* Limita el ancho a 1200px */
+}
+
+/* Asegurar que el encabezado utilice el 100% del ancho */
+.full-width {
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+
+/* Diseño de Categorías */
+/* Asegurar que las categorías estén centradas debajo del sticky-header */
+.category-section {
+    scroll-margin-top: 120px; /* Ajusta el espacio debajo del sticky-header */
+    padding-top: 20px; /* Espaciado interno para mayor claridad */
+}
+
+.category-header h2 {
+    font-size: 1.8rem;
+    color: #11999E;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.category-header p {
+    font-size: 1rem;
+    color: #666666;
+    text-align: left;
+}
+
 
 /* Encabezado de Categorías */
 .category-header {
