@@ -9,6 +9,7 @@
   <meta name="robots" content="index, follow">
   <title>DIGITEM | Transforma. Conecta. Evoluciona.</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -18,7 +19,7 @@
         <div class="container">
             <!-- Logo y Nombre de la Marca -->
             <div class="logo">
-                <img src="/Images/DIGITEM - Logo.png" alt="Logotipo de DIGITEM">
+                <img src="/Images/digitem-logo-bg-white.png" alt="Logotipo de DIGITEM">
                 <span class="brand-name">DIGITEM</span>
             </div>
     
@@ -61,7 +62,7 @@
     </section>
 
   <!-- About Section -->
-    <section class="about-section">
+    <section class="about-section" id="about">
         <div class="about-content">
             <h2 class="headline">“Aquellos que están lo suficientemente locos para creer que pueden cambiar el mundo, son quienes lo logran.”</h2>
             <h3 class="quote-author">- <strong>Steve Jobs</strong></h3>
@@ -77,22 +78,32 @@
   <!-- Services Section -->
     <section class="services-section" id="services">
         <!-- Encabezado General Sticky -->
-        <div class="section-header sticky-header full-width">
-            <h2>Transforma tu Negocio</h2>
+        <div class="sticky-header">
+            <h1>Transforma tu Negocio</h1>
             <p>Descubre cómo DIGITEM puede llevar tu proyecto al siguiente nivel.</p>
+            <!-- Aquí va tu contenido del encabezado -->
+            
+            <!-- Línea de colores en la parte inferior -->
+            <div class="gradient-line"></div>
         </div>
 
         <!-- Contenedor Global de Categorías -->
         <div class="services-content">
             <!-- Categoría: Desarrollo Web -->
             <div class="category-section" id="desarrollo-web">
+               
                 <!-- Encabezado de la Categoría -->
-                <div class="category-header">
-                    <h2>Desarrollo Web</h2>
-                    <p>Diseña, conecta y expande tu presencia digital con soluciones personalizadas.</p>
-                </div>
+                    <div class="category-header">
+                        <h2>Desarrollo Web</h2>
+                        <p>Diseña, conecta y expande tu presencia digital con soluciones personalizadas.</p>
+                        <div class="toggle-container">
+                            <button class="toggle-button" aria-expanded="false">
+                                <span class="arrow">▼</span> <!-- Flecha -->
+                            </button>
+                            <span class="toggle-text">Ver servicios</span> <!-- Texto descriptivo -->
+                        </div>
+                    </div>
 
-                <!-- Contenedor de Tarjetas con Scroll -->
                 <!-- Contenedor de Tarjetas con Scroll -->
                 <div class="contenedor-tarjetas-servicios">
                     <!-- Tarjeta General -->
@@ -111,7 +122,7 @@
                     <!-- Tarjeta Esencial -->
                     <div class="card-service">
                         <h3>Web Esencial</h3>
-                        <img src="/Images/HERO.png" alt="Web esencial" class="card-image">
+                        <img src="/Images/Web-Esencial.png" alt="Web esencial" class="card-image">
                         <p>Establece tu presencia online con un diseño funcional y profesional.</p>
                         <button>Conoce más</button>
                     </div>
@@ -119,7 +130,7 @@
                     <!-- Tarjeta Negocios Max -->
                     <div class="card-service">
                         <h3>Web Negocios Max</h3>
-                        <img src="/Images/Hero1.jpg" alt="Web negocios" class="card-image">
+                        <img src="/Images/Web-Negocios-Max.png" alt="Web negocios" class="card-image">
                         <p>Mejora la interacción con tus clientes y amplía las funcionalidades digitales.</p>
                         <button>Conoce más</button>
                     </div>
@@ -127,7 +138,7 @@
                     <!-- Tarjeta Custom Premium -->
                     <div class="card-service">
                         <h3>Web Custom Premium</h3>
-                        <img src="/Images/background_hero.jpg" alt="Web personalizada" class="card-image">
+                        <img src="/Images/Web-Custom-Premium.png" alt="Web personalizada" class="card-image">
                         <p>Soluciones avanzadas y personalizadas para necesidades específicas.</p>
                         <button>Conoce más</button>
                     </div>
@@ -140,6 +151,12 @@
                 <div class="category-header">
                     <h2>Consultoría y Acompañamiento</h2>
                     <p>Estrategias para construir, hacer crecer y adaptar tu negocio a las tendencias del mercado.</p>
+                    <div class="toggle-container">
+                        <button class="toggle-button" aria-expanded="false">
+                            <span class="arrow">▼</span> <!-- Flecha -->
+                        </button>
+                        <span class="toggle-text">Ver servicios</span> <!-- Texto descriptivo -->
+                    </div>
                 </div>
 
                 <!-- Contenedor de las Tarjetas con Scroll -->
@@ -158,21 +175,21 @@
                     <!-- Tarjetas Específicas -->
                     <div class="card-service">
                         <h3>Lanzamiento de Marca</h3>
-                        <img src="path/to/branding-image.jpg" alt="Lanzamiento de Marca" class="card-image">
+                        <img src="/Images/Brand-Launch.png" alt="Lanzamiento de Marca" class="card-image">
                         <p>Construcción de identidad visual y estrategias iniciales para destacar en tu industria.</p>
                         <button>Conoce más</button>
                     </div>
 
                     <div class="card-service">
                         <h3>Estrategias de Crecimiento</h3>
-                        <img src="path/to/growth-image.jpg" alt="Estrategias de Crecimiento" class="card-image">
+                        <img src="/Images/Estrategia-Crecimiento.png" alt="Estrategias de Crecimiento" class="card-image">
                         <p>Planes personalizados para escalar tu negocio y abrir nuevas oportunidades.</p>
                         <button>Conoce más</button>
                     </div>
 
                     <div class="card-service">
                         <h3>Acompañamiento Continuo</h3>
-                        <img src="path/to/continuous-support-image.jpg" alt="Acompañamiento Continuo" class="card-image">
+                        <img src="/Images/Acompañamiento-Continuo.png" alt="Acompañamiento Continuo" class="card-image">
                         <p>Soporte constante para ajustar y optimizar tus estrategias según tus metas.</p>
                         <button>Conoce más</button>
                     </div>
@@ -185,6 +202,12 @@
                 <div class="category-header">
                     <h2>Fotografía</h2>
                     <p>Capturamos la esencia de tu marca a través de imágenes impactantes y profesionales.</p>
+                    <div class="toggle-container">
+                        <button class="toggle-button" aria-expanded="false">
+                            <span class="arrow">▼</span> <!-- Flecha -->
+                        </button>
+                        <span class="toggle-text">Ver servicios</span> <!-- Texto descriptivo -->
+                    </div>
                 </div>
 
                 <!-- Contenedor de las Tarjetas con Scroll -->
@@ -203,21 +226,21 @@
                     <!-- Tarjetas Específicas -->
                     <div class="card-service">
                         <h3>Fotografía Corporativa</h3>
-                        <img src="path/to/corporate-photography-image.jpg" alt="Fotografía Corporativa" class="card-image">
+                        <img src="Images/Foto-Croporativa.png" alt="Fotografía Corporativa" class="card-image">
                         <p>Retratos profesionales y fotos de equipo que reflejan la identidad de tu marca en todo su esplendor.</p>
                         <button>Conoce más</button>
                     </div>
 
                     <div class="card-service">
                         <h3>Fotografía Publicitaria</h3>
-                        <img src="path/to/advertising-photography-image.jpg" alt="Fotografía Publicitaria" class="card-image">
+                        <img src="/Images/Foto-Publicitaria.png" alt="Fotografía Publicitaria" class="card-image">
                         <p>Imágenes de alta calidad para productos, servicios y campañas publicitarias que capturan la atención.</p>
                         <button>Conoce más</button>
                     </div>
 
                     <div class="card-service">
                         <h3>Fotografía de Eventos</h3>
-                        <img src="path/to/events-photography-image.jpg" alt="Fotografía de Eventos" class="card-image">
+                        <img src="/Images/Foto-Eventos.png" alt="Fotografía de Eventos" class="card-image">
                         <p>Capturamos momentos únicos en eventos corporativos, lanzamientos y más.</p>
                         <button>Conoce más</button>
                     </div>
@@ -230,6 +253,12 @@
                 <div class="category-header">
                     <h2>Marketing Digital</h2>
                     <p>Conecta con tu audiencia, aumenta tu visibilidad y maximiza tus oportunidades de negocio.</p>
+                    <div class="toggle-container">
+                        <button class="toggle-button" aria-expanded="false">
+                            <span class="arrow">▼</span> <!-- Flecha -->
+                        </button>
+                        <span class="toggle-text">Ver servicios</span> <!-- Texto descriptivo -->
+                    </div>
                 </div>
 
                 <!-- Contenedor de las Tarjetas con Scroll -->
@@ -248,21 +277,21 @@
                     <!-- Tarjetas Específicas -->
                     <div class="card-service">
                         <h3>Marketing Esencial</h3>
-                        <img src="path/to/essential-marketing-image.jpg" alt="Marketing Esencial" class="card-image">
+                        <img src="/Images/mkt-Esencial.png" alt="Marketing Esencial" class="card-image">
                         <p>Campañas básicas de redes sociales y SEO para aumentar tu visibilidad online.</p>
                         <button>Conoce más</button>
                     </div>
 
                     <div class="card-service">
                         <h3>Marketing de Interacción</h3>
-                        <img src="path/to/interaction-marketing-image.jpg" alt="Marketing de Interacción" class="card-image">
+                        <img src="/Images/mkt-interaction.png" alt="Marketing de Interacción" class="card-image">
                         <p>Mejora la conexión con tu audiencia utilizando estrategias avanzadas de engagement.</p>
                         <button>Conoce más</button>
                     </div>
 
                     <div class="card-service">
                         <h3>Marketing Avanzado</h3>
-                        <img src="path/to/advanced-marketing-image.jpg" alt="Marketing Avanzado" class="card-image">
+                        <img src="/Images/mkt-pro.png" alt="Marketing Avanzado" class="card-image">
                         <p>Publicidad pagada y análisis de resultados para maximizar el retorno de inversión.</p>
                         <button>Conoce más</button>
                     </div>
@@ -275,6 +304,12 @@
                 <div class="category-header">
                     <h2>Análisis de Datos</h2>
                     <p>Transforma datos en decisiones estratégicas con nuestras soluciones de análisis avanzado.</p>
+                    <div class="toggle-container">
+                        <button class="toggle-button" aria-expanded="false">
+                            <span class="arrow">▼</span> <!-- Flecha -->
+                        </button>
+                        <span class="toggle-text">Ver servicios</span> <!-- Texto descriptivo -->
+                    </div>
                 </div>
 
                 <!-- Contenedor de las Tarjetas con Scroll -->
@@ -293,21 +328,21 @@
                     <!-- Tarjetas Específicas -->
                     <div class="card-service">
                         <h3>Análisis Básico</h3>
-                        <img src="path/to/basic-analysis-image.jpg" alt="Análisis Básico" class="card-image">
+                        <img src="Images/AD-Basic.png" alt="Análisis Básico" class="card-image">
                         <p>Informes detallados sobre tráfico web, métricas clave y comportamiento del cliente.</p>
                         <button>Conoce más</button>
                     </div>
 
                     <div class="card-service">
                         <h3>Análisis Intermedio</h3>
-                        <img src="path/to/intermediate-analysis-image.jpg" alt="Análisis Intermedio" class="card-image">
+                        <img src="Images/AD-Inter.png" alt="Análisis Intermedio" class="card-image">
                         <p>Segmentación de audiencias y análisis de campañas para mejorar tus estrategias.</p>
                         <button>Conoce más</button>
                     </div>
 
                     <div class="card-service">
                         <h3>Análisis Predictivo</h3>
-                        <img src="path/to/predictive-analysis-image.jpg" alt="Análisis Predictivo" class="card-image">
+                        <img src="Images/AD-Predict.png" alt="Análisis Predictivo" class="card-image">
                         <p>Previsión de crecimiento y optimización de procesos para tomar decisiones informadas.</p>
                         <button>Conoce más</button>
                     </div>
@@ -315,26 +350,49 @@
             </div>
         </div>
     </section>
-
-
+    <div class="gradient-line"></div>
 
   <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-        <h2>Contacto</h2>
-        <form action="submit.php" method="POST">
-            <input type="text" name="name" placeholder="Tu nombre" required>
-            <input type="email" name="email" placeholder="Tu correo" required>
-            <textarea name="message" placeholder="Tu mensaje" rows="5" required></textarea>
-            <button type="submit" class="btn-primary">Enviar mensaje</button>
-        </form>
-        <div class="contact-info">
-            <p><strong>Correo:</strong> <a href="mailto:emma_herrera@digitem-mx.com">emma_herrera@digitem-mx.com</a></p>
-            <p><strong>Teléfono:</strong> <a href="tel:+525522971545">55-2297-1545</a></p>
-            <p><strong>Instagram:</strong> <a href="https://www.instagram.com/digitem.mx/" target="_blank">@digitem.mx</a></p>
-            <p><strong>Facebook:</strong> <a href="https://www.facebook.com/profile.php?id=61568984612143" target="_blank">Facebook de DIGITEM</a></p>
+    <section class="contact-section" id="contact">
+        <div class="contact-image">
+            <img src="/Images/contact-office.png" alt="Oficina con personal trabajando">
         </div>
+    
+        <div class="contact-details">
+
+            <div class="calendar-social-wrapper">
+                <!-- Calendario de Google -->
+                <div class="calendar-embed">
+                    <h2>Agenda tu Consultoría Inicial</h2>
+                    <p>¡Es totalmente gratis! Reserva un espacio y descubre cómo podemos ayudarte.</p>
+                    <iframe 
+                        src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FMexico_City&bgcolor=%23ffffff&src=ZW1tYV9oZXJyZXJhQGRpZ2l0ZW0tbXguY29t&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4udXNhLm9mZmljaWFsI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%2333B679&color=%230B8043" 
+                        style="border:solid 1px #777" 
+                        frameborder="0" 
+                        scrolling="no">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Redes Sociales -->
+            <div class="social-media">
+                <h3>Conéctate con nosotros</h3>
+                <a href="https://www.facebook.com/profile.php?id=61568984612143" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/digitem.mx" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="mailto:emma_herrera@digitem-mx.com" aria-label="Correo">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="tel:+525522971545" aria-label="Teléfono">
+                    <i class="fas fa-phone-alt"></i>
+                </a>
+            </div>
+            
         </div>
+
     </section>
 
   <!-- Footer -->

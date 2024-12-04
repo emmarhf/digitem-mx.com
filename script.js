@@ -53,3 +53,28 @@ const observer = new IntersectionObserver(
 
 // Observar la sección de servicios
 observer.observe(servicesSection);
+
+
+
+// Seleccionar todos los contenedores de los botones
+const toggleContainers = document.querySelectorAll('.toggle-container');
+
+toggleContainers.forEach((container) => {
+    const button = container.querySelector('.toggle-button');
+    const text = container.querySelector('.toggle-text');
+    const target = container.parentElement.nextElementSibling; // Contenedor asociado
+
+    button.addEventListener('click', () => {
+        const isExpanded = button.getAttribute('aria-expanded') === 'true';
+        button.setAttribute('aria-expanded', !isExpanded);
+
+        // Alternar clases y texto
+        if (isExpanded) {
+            target.classList.remove('open');
+            text.textContent = 'Ver servicios'; // Texto al colapsar
+        } else {
+            target.classList.add('open');
+            text.textContent = 'Ocultar servicios'; // Texto al expandir
+        }
+    });
+});
